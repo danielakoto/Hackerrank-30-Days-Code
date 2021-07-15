@@ -1,0 +1,29 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scan = new Scanner(System.in);
+        scan.nextLine();
+        while(scan.hasNextLine()){
+            String string = scan.nextLine();
+            calc(string);
+        }
+    }
+    
+    public static void calc(String string) {
+        String subString1 = "";
+        String subString2 = "";
+        for(int i = 0; i < string.length(); i+=2){
+            subString1 += string.substring(i,i+1);
+        }
+        for(int i = 1; i < string.length(); i+=2){
+            subString2 += string.substring(i,i+1);
+        }
+        System.out.println(subString1 + " " + subString2);
+    }
+    
+    
+}
