@@ -1,0 +1,26 @@
+import java.util.*;
+import java.io.*;
+class Node{
+    Node left,right;
+    int data;
+    Node(int data){
+        this.data=data;
+        left=right=null;
+    }
+}
+class Solution{
+
+static void levelOrder(Node root){
+      //Write your code here
+      Queue<Node> aNode = new LinkedList<Node>();
+      aNode.add(root);
+      while(!aNode.isEmpty()){
+          if(root.left != null)
+            aNode.add(root.left);
+          if(root.right != null)
+            aNode.add(root.right);
+          System.out.print(aNode.peek().data + " ");
+          aNode.remove();
+          root = aNode.peek();
+      }
+    }
