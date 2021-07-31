@@ -1,0 +1,29 @@
+public static class TestDataEmptyArray {
+    public static int[] get_array() {
+        int[] arr = {};
+        return arr;
+    }
+}
+
+public static class TestDataUniqueValues {
+    public static int[] get_array() {
+        int[] arr = {1,2};
+        return arr;
+    }
+    
+    public static int get_expected_result() {
+        return 0;
+    }
+    
+}
+
+public static class TestDataExactlyTwoDifferentMinimums {
+    public static int[] get_array(){
+        int[] arr = {1,0,0,4,5};
+        return arr;
+    }
+    
+    public static int get_expected_result() {
+        return 1;
+    }
+}
